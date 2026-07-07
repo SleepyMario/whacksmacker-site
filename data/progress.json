@@ -1,0 +1,39 @@
+{
+  "milestones": [
+    {
+      "date": "2026-07-07",
+      "title": "Korean Core renumbered around Introduction to Hangul",
+      "summary": "Hangul writing-system material became Introduction to Hangul, and Korean Core now starts at the first sentence-pattern chapter."
+    },
+    {
+      "date": "2026-07-07",
+      "title": "Korean review decks split into smaller milestones",
+      "summary": "Active Korean Core decks are Chapter 1-5, Chapter 6-10, and Chapter 11-15."
+    },
+    {
+      "date": "2026-07-07",
+      "title": "Chinese display name changed to Chinese - Mandarin",
+      "summary": "Package-facing and menu-facing naming now leaves room for future Chinese - Cantonese and Chinese - Classical curricula."
+    },
+    {
+      "date": "2026-07-07",
+      "title": "Chinese Pinyin-Zhuyin decks created",
+      "summary": "Chinese - Mandarin has Pinyin-Zhuyin and Pinyin-Zhuyin with Tones conversion review decks."
+    },
+    {
+      "date": "2026-07-07",
+      "title": "Vietnamese cast, Foundation, Core Chapters 1-5, and first deck created",
+      "summary": "Vietnamese now has a fixed cast, Foundation chapters, Core Chapters 1-5, and the Chapter 1-5 review deck."
+    },
+    {
+      "date": "2026-07-07",
+      "title": "Package flow validates Korean, Chinese - Mandarin, and Vietnamese review sources",
+      "summary": "WhackSmacker package generation, catalogue, installation, and review-source listing work across the current language package set."
+    },
+    {
+      "date": "2026-07-07",
+      "title": "Review continuation prompt added",
+      "summary": "After finishing one package review source, WhackSmacker can offer to continue with the next deck."
+    }
+  ]
+}

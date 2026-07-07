@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+*.tmp
+*.wspkg
+*.apkg
+node_modules/

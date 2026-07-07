@@ -1,0 +1,41 @@
+# WhackSmacker Site
+
+This repository contains the static public preview website for `www.whacksmacker.com`.
+
+It is not the full WhackSmacker frontend. It is a lightweight development preview site with project status, progress notes, roadmap notes, and experimental download warnings.
+
+## Hosting
+
+Intended hosting: Cloudflare Pages.
+
+Suggested Cloudflare Pages settings:
+
+- Build command: none
+- Output directory: repository root
+- Custom domain: `www.whacksmacker.com`
+
+## Local Preview
+
+From this repository:
+
+```sh
+python3 -m http.server 8000
+```
+
+Then open:
+
+```text
+http://localhost:8000/
+```
+
+The progress page fetches `data/progress.json`, so preview it through a static server rather than opening `progress.html` directly from the filesystem.
+
+## Deployment Notes
+
+1. Create or connect the GitHub repository for this site.
+2. Connect that GitHub repository to Cloudflare Pages.
+3. Use no build command.
+4. Use the repository root as the output directory.
+5. Configure `www.whacksmacker.com` as the custom domain.
+
+Do not put secrets, binaries, release artifacts, or generated package files in this repository.

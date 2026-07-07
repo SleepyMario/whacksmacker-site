@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Progress - WhackSmacker</title>
+    <meta name="description" content="Day-by-day WhackSmacker progress tracker.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="assets/progress.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">WhackSmacker</a>
+      <nav aria-label="Primary navigation">
+        <a aria-current="page" href="progress.html">Progress</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="downloads.html">Downloads</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-heading">
+        <p class="eyebrow">Progress tracker</p>
+        <h1>Day-by-day work log</h1>
+        <p>This page reads from <code>data/progress.json</code>. It is a public snapshot, not a promise machine.</p>
+      </section>
+
+      <section aria-labelledby="progress-heading">
+        <h2 id="progress-heading">Recent Milestones</h2>
+        <div id="progress-list" class="timeline" aria-live="polite">
+          <p>Loading progress data...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="index.html">Back to WhackSmacker home</a></p>
+    </footer>
+  </body>
+</html>

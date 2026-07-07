@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">WhackSmacker terminal preview</title>
+  <desc id="desc">A stylized terminal window showing review decks and package content.</desc>
+  <rect width="960" height="560" fill="#1c1c1f"/>
+  <rect x="48" y="48" width="864" height="464" rx="10" fill="#f7f4ef"/>
+  <rect x="48" y="48" width="864" height="54" rx="10" fill="#2b2b31"/>
+  <circle cx="82" cy="75" r="9" fill="#d93636"/>
+  <circle cx="112" cy="75" r="9" fill="#e6a93f"/>
+  <circle cx="142" cy="75" r="9" fill="#39715f"/>
+  <text x="72" y="150" fill="#951f2c" font-family="monospace" font-size="30" font-weight="700">$ whacksmacker review sources</text>
+  <text x="72" y="205" fill="#1c1c1f" font-family="monospace" font-size="26">Korean: Chapter 1-5</text>
+  <text x="72" y="250" fill="#1c1c1f" font-family="monospace" font-size="26">Korean: Chapter 6-10</text>
+  <text x="72" y="295" fill="#1c1c1f" font-family="monospace" font-size="26">Chinese - Mandarin: Pinyin-Zhuyin</text>
+  <text x="72" y="340" fill="#1c1c1f" font-family="monospace" font-size="26">Vietnamese: Chapter 1-5</text>
+  <rect x="72" y="382" width="780" height="2" fill="#ded6cb"/>
+  <text x="72" y="430" fill="#245f8f" font-family="monospace" font-size="26">Continue with the next deck? y/n</text>
+  <text x="72" y="474" fill="#39715f" font-family="monospace" font-size="26">terminal-first chaos: contained, mostly</text>
+</svg>
