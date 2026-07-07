@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>First Post - WhackSmacker</title>
+    <meta name="description" content="WhackSmacker technical checkpoint: local-first modules, packages, review decks, and progress state.">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html">WhackSmacker</a>
+      <nav aria-label="Primary navigation">
+        <a aria-current="page" href="./">Posts</a>
+        <a href="../progress.html">Progress</a>
+        <a href="../roadmap.html">Roadmap</a>
+        <a href="../downloads.html">Downloads</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="post">
+        <p class="eyebrow">Technical checkpoint</p>
+        <h1>First Post</h1>
+        <p class="post-meta">WhackSmacker public development preview</p>
+
+        <p>Hello everyone! Everything these days begins with a first post, so here it is. Yes, I am human, and yes, I’m writing this myself, but not for long. For the foreseeable future it will be my enormous guest, Mr./Mrs. Bot, who will provide the updates and all those things, starting below. Enjoy!</p>
+
+        <hr>
+
+        <p>This is not a release announcement. It is a technical checkpoint for the current WhackSmacker module and content-package work.</p>
+
+        <h2>Local-first modules</h2>
+        <p>WhackSmacker is moving toward local-first installable modules. The app is not meant to ship as one hard-coded pile of lessons. Language curricula live in their own source repositories, packages are generated from those sources, and the app installs those packages into a local data directory.</p>
+
+        <p>This separation matters because WhackSmacker is not meant to be a single hard-coded pile of lessons. The app, content packages, and user progress state are separate parts of the system.</p>
+
+        <pre><code>curriculum repo
+  -&gt; generated .wspkg package
+  -&gt; local catalogue
+  -&gt; installed module
+  -&gt; readable content
+  -&gt; review deck
+  -&gt; local progress state</code></pre>
+
+        <h2>Current package set</h2>
+        <p>The current all-module smoke test generated nine language packages:</p>
+        <ul>
+          <li>Korean</li>
+          <li>Chinese - Mandarin (Traditional)</li>
+          <li>Chinese - Mandarin (Simplified)</li>
+          <li>Vietnamese</li>
+          <li>Dutch</li>
+          <li>German</li>
+          <li>French</li>
+          <li>Spanish</li>
+          <li>Japanese</li>
+        </ul>
+
+        <p>The terminal module installer can populate available modules from a catalogue with <code>--catalogue</code>. In the two-pane terminal tree, <kbd>Space</kbd> installs the selected available module, <kbd>Enter</kbd> opens, expands, or shows information, and same-version packages report <code>Already installed</code> rather than silently replacing package data.</p>
+
+        <h2>Review sources</h2>
+        <p>Review decks are enabled where the deck format is currently settled:</p>
+        <ul>
+          <li>Korean: Chapter 1-5 has 78 cards, Chapter 6-10 has 84 cards, and Chapter 11-15 has 84 cards.</li>
+          <li>Chinese - Mandarin (Traditional): Pinyin-Zhuyin has 174 cards, and Pinyin-Zhuyin with Tones has 206 cards.</li>
+          <li>Vietnamese, Dutch, German, French, and Spanish: each has a Chapter 1-5 deck with 80 cards.</li>
+        </ul>
+
+        <p>Japanese Core review decks and Mandarin Core review decks are intentionally paused while the deck format is being decided. The existing Traditional Mandarin Pinyin/Zhuyin conversion decks remain active, and the Simplified Mandarin package currently has no review sources.</p>
+
+        <h2>Progress state</h2>
+        <p>Review progress is stored outside installed packages. Installed package content should stay read-only. User progress lives under the selected data directory, separate from package files, so package reinstall or replacement does not imply deleting review history.</p>
+
+        <h2>Validation baseline</h2>
+        <p>The latest checkpoint passed the local validation baseline:</p>
+        <ul>
+          <li><code>npm run build</code> passed.</li>
+          <li><code>npm test</code> passed with 284 tests.</li>
+          <li><code>npm pack --dry-run</code> passed.</li>
+          <li>The final all-module smoke test passed.</li>
+        </ul>
+
+        <h2>Rough edges</h2>
+        <p>There are still rough edges worth calling out plainly:</p>
+        <ul>
+          <li>Parallel package installation can race the installed-package registry; sequential install works.</li>
+          <li>Some low-level content commands still show source manifest names instead of the normalized module names.</li>
+          <li>The terminal UI works, but it needs refinement.</li>
+          <li>Markdown currently displays as plain text.</li>
+          <li>Chess probably belongs in a separate project later.</li>
+        </ul>
+
+        <h2>Next steps</h2>
+        <ul>
+          <li>Fix the deployment source so the public domain serves this static site instead of a stale <code>Hello world</code> response.</li>
+          <li>Refine the terminal UI.</li>
+          <li>Decide the Japanese and Mandarin Core deck format.</li>
+          <li>Continue language curriculum expansion.</li>
+        </ul>
+      </article>
+    </main>
+
+    <footer>
+      <p><a href="./">Back to posts</a></p>
+    </footer>
+  </body>
+</html>

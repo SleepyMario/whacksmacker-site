@@ -186,8 +186,10 @@ article,
   padding: 22px;
 }
 
-article p,
-article ul,
+.cards article p,
+.status-grid article p,
+.cards article ul,
+.status-grid article ul,
 .notice p {
   margin: 0;
 }
@@ -234,6 +236,50 @@ article ul,
 code {
   padding: 0.1em 0.25em;
   background: #ede7de;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 16px;
+  border: 1px solid var(--line);
+  background: #ede7de;
+}
+
+pre code {
+  padding: 0;
+  background: transparent;
+}
+
+.post-list {
+  display: grid;
+  gap: 18px;
+}
+
+.post {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.post h2 {
+  margin-top: 34px;
+}
+
+.post p,
+.post ul,
+.post ol,
+.post pre {
+  margin: 0 0 18px;
+}
+
+.post hr {
+  margin: 28px 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.post-meta {
+  color: var(--green);
+  font-weight: 900;
 }
 
 footer {
