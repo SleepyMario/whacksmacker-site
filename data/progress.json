@@ -1,6 +1,51 @@
 {
   "milestones": [
     {
+      "date": "2026-07-08",
+      "title": "First public Docker image path documented",
+      "summary": "Added the pre-alpha Docker image path sleepiestmario/whacksmacker:latest."
+    },
+    {
+      "date": "2026-07-08",
+      "title": "Current Docker run command documented",
+      "summary": "Recorded the Docker command with non-root user, HOME=/data, data-volume, --data-dir, and --catalogue setup so review progress and package data are not created as root-owned files."
+    },
+    {
+      "date": "2026-07-08",
+      "title": "WhackSmacker packaging VM role clarified",
+      "summary": "Promoted gentoo-wsm-validate from a Docker validation VM into the main WhackSmacker packaging/validation VM, while keeping gentoo-base as the clean reusable Gentoo base VM."
+    },
+    {
+      "date": "2026-07-08",
+      "title": "Host-side VM automation fixed",
+      "summary": "Updated the VM automation path to use system libvirt explicitly with virsh -c qemu:///system."
+    },
+    {
+      "date": "2026-07-08",
+      "title": "Packaging roadmap established",
+      "summary": "Set the current path as Docker first, Gentoo validation next, Arch/AUR after that, then Debian/Ubuntu .deb, RPM-family packages, and eventually a generic Linux tarball or AppImage."
+    },
+    {
+      "date": "2026-07-08",
+      "title": "Review UI prompt and rating bar improved",
+      "summary": "Kept the prompt visible during review and fixed the bottom rating bar around 1 Again, 2 Hard, 3 Good, and 4 Easy."
+    },
+    {
+      "date": "2026-07-08",
+      "title": "Learner-facing review card sections added",
+      "summary": "Added Notes and Example sections to review cards, hid internal authoring/classification notes from learner-facing output, and kept useful compact linguistic notes available."
+    },
+    {
+      "date": "2026-07-08",
+      "title": "Example sentence correctness identified as next priority",
+      "summary": "Next priority: fix Example sentence/source selection across language review decks so each non-exempt core review card gets one to three literal source/read-content examples where expected; Chinese conversion-only pronunciation decks remain exempt, and Japanese remains special until generated review decks are ready."
+    },
+    {
+      "date": "2026-07-08",
+      "title": "Latest pre-alpha devlog drafted",
+      "summary": "Drafted the devlog post titled WackSmacker, Schmeckblacker, GladPecker, or something that actually sells? and noted that the current public build is still pre-alpha, not stable."
+    },
+    {
       "date": "2026-07-07",
       "title": "Korean Core renumbered around Introduction to Hangul",
       "summary": "Hangul writing-system material became Introduction to Hangul, and Korean Core now starts at the first sentence-pattern chapter."

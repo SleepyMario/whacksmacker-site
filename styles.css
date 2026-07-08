@@ -112,8 +112,14 @@ section {
 }
 
 .hero p,
-.page-heading p {
+.page-heading p,
+.section-note {
   max-width: 760px;
+}
+
+.section-note {
+  margin: 0 0 20px;
+  color: var(--muted);
 }
 
 .eyebrow {
@@ -209,6 +215,25 @@ article ul,
 
 .tagline {
   color: var(--accent-dark);
+  font-weight: 800;
+}
+
+.status-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.status-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  background: #ede7de;
+  color: var(--accent-dark);
+  font-size: 0.88rem;
   font-weight: 800;
 }
 

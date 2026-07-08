@@ -12,6 +12,7 @@
       <a class="brand" href="index.html">WhackSmacker</a>
       <nav aria-label="Primary navigation">
         <a href="#status">Status</a>
+        <a href="#content-status">Content</a>
         <a href="#modules">Modules</a>
         <a href="#docker">Docker</a>
         <a href="posts/">Posts</a>
@@ -77,28 +78,121 @@
         </article>
       </section>
 
-      <section aria-labelledby="content-heading">
+      <section id="content-status" aria-labelledby="content-heading">
         <h2 id="content-heading">Language And Content Status</h2>
+        <p class="section-note">
+          All of this is still pre-alpha. The app is usable for development testing and personal
+          validation, not stable public study use. Review decks exist for multiple modules, but
+          content quality is still being corrected.
+        </p>
         <div class="cards">
           <article>
             <h3>Korean</h3>
-            <p>Introduction to Hangul, Korean Core Chapters 1-15, and review decks:</p>
-            <p class="tagline">Chapter 1-5 / Chapter 6-10 / Chapter 11-15</p>
+            <p>Core curriculum exists and review decks are available in development builds.</p>
+            <p class="status-tags">
+              <span>Review deck present</span>
+              <span>Content pass needed</span>
+              <span>Notes/examples need polish</span>
+            </p>
           </article>
           <article>
-            <h3>Chinese - Mandarin</h3>
-            <p>Pinyin-Zhuyin conversion review decks are available as package review sources.</p>
-            <p class="tagline">Pinyin-Zhuyin / Pinyin-Zhuyin with Tones</p>
+            <h3>Chinese - Mandarin Traditional</h3>
+            <p>Traditional track exists with Pinyin and Zhuyin support. The review-card model is implemented, including pronunciation/conversion decks.</p>
+            <p class="status-tags">
+              <span>Available in development builds</span>
+              <span>Special handling</span>
+              <span>Conversion decks exempt from source examples</span>
+            </p>
+          </article>
+          <article>
+            <h3>Chinese - Mandarin Simplified</h3>
+            <p>Simplified track exists with Pinyin support. The review-card model is implemented, but content status should stay conservative while deck coverage settles.</p>
+            <p class="status-tags">
+              <span>Available in development builds</span>
+              <span>Content pass needed</span>
+              <span>Not stable yet</span>
+            </p>
+          </article>
+          <article>
+            <h3>Japanese</h3>
+            <p>Curriculum exists and the Japanese review-card model is implemented. Japanese remains special until generated review decks are fully ready.</p>
+            <p class="status-tags">
+              <span>Available in development builds</span>
+              <span>Special handling</span>
+              <span>Generated decks not claimed complete</span>
+            </p>
           </article>
           <article>
             <h3>Vietnamese</h3>
-            <p>Foundation chapters, Core Chapters 1-5, and the first review deck are specified.</p>
-            <p class="tagline">Chapter 1-5 review deck</p>
+            <p>Core curriculum exists and a review deck is available in development builds.</p>
+            <p class="status-tags">
+              <span>Review deck present</span>
+              <span>Example/source correctness pass needed</span>
+            </p>
           </article>
           <article>
-            <h3>Planned next languages</h3>
-            <p>Dutch, Japanese, German, French, and Spanish are planned next.</p>
-            <p class="tagline">Order may change while the package work settles.</p>
+            <h3>Dutch</h3>
+            <p>Core curriculum exists and a review deck is available in development builds.</p>
+            <p class="status-tags">
+              <span>Review deck present</span>
+              <span>Example/source correctness pass needed</span>
+            </p>
+          </article>
+          <article>
+            <h3>German</h3>
+            <p>Curriculum/module exists, but the status is still early and incomplete.</p>
+            <p class="status-tags">
+              <span>Early placeholder / incomplete</span>
+              <span>Content pass needed</span>
+            </p>
+          </article>
+          <article>
+            <h3>French</h3>
+            <p>Curriculum/module exists, but the status is still early and incomplete.</p>
+            <p class="status-tags">
+              <span>Early placeholder / incomplete</span>
+              <span>Content pass needed</span>
+            </p>
+          </article>
+          <article>
+            <h3>Spanish</h3>
+            <p>Curriculum/module exists, but the status is still early and incomplete.</p>
+            <p class="status-tags">
+              <span>Early placeholder / incomplete</span>
+              <span>Content pass needed</span>
+            </p>
+          </article>
+        </div>
+        <div class="notice">
+          <h3>Next major content milestone</h3>
+          <p>
+            Fix Example sentence/source selection. Normal core review cards should use one to
+            three literal examples from source/read content where expected. Invented example
+            sentences should not be generated for review output. Chinese conversion-only
+            pronunciation decks are exempt, and Japanese remains special until its generated
+            review decks are ready.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="other-content-heading">
+        <h2 id="other-content-heading">Other Content Modules</h2>
+        <div class="cards">
+          <article>
+            <h3>Linguistic terminology</h3>
+            <p>Terminology content exists as a separate support module for language-learning work.</p>
+            <p class="status-tags">
+              <span>Support module present</span>
+              <span>Development build content</span>
+            </p>
+          </article>
+          <article>
+            <h3>Math curriculum</h3>
+            <p>Math curriculum content exists separately from the language-learning modules.</p>
+            <p class="status-tags">
+              <span>Module present</span>
+              <span>Development build content</span>
+            </p>
           </article>
         </div>
       </section>
