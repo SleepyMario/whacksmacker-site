@@ -11,6 +11,9 @@
     <header class="site-header">
       <a class="brand" href="index.html">WhackSmacker</a>
       <nav aria-label="Primary navigation">
+        <a href="#status">Status</a>
+        <a href="#modules">Modules</a>
+        <a href="#docker">Docker</a>
         <a href="posts/">Posts</a>
         <a href="progress.html">Progress</a>
         <a href="roadmap.html">Roadmap</a>
@@ -26,27 +29,36 @@
           <p class="subtitle">language learning, review decks, and terminal-first chaos</p>
           <p>
             WhackSmacker is a small, practical learning project built around curriculum packages,
-            native review sources, and a terminal-first workflow. It is not stable software yet.
-            It is a workshop with the doors open.
+            native review sources, package feeds, and a terminal-first workflow. It is not stable
+            software yet. It is a public pre-alpha workshop with the doors open.
           </p>
           <div class="actions">
             <a class="button" href="https://github.com/SleepyMario/whacksmacker">WhackSmacker on GitHub</a>
             <a class="button secondary" href="progress.html">See progress</a>
+            <a class="button secondary" href="posts/">Read posts</a>
           </div>
         </div>
         <img class="hero-image" src="assets/terminal-preview.svg" alt="Stylized terminal preview of WhackSmacker review sources">
       </section>
 
-      <section class="status-grid" aria-labelledby="status-heading">
+      <section class="status-grid" id="status" aria-labelledby="status-heading">
         <h2 id="status-heading">Current Status</h2>
         <article>
           <h3>Development state</h3>
           <ul>
-            <li>Public development preview.</li>
-            <li>Not a stable release.</li>
+            <li>Public development preview / pre-alpha.</li>
+            <li>Not stable, not polished, and not ready for serious study routines.</li>
             <li>Package/content system in active development.</li>
-            <li>No fake polish, no imaginary production claims.</li>
+            <li>Docker image exists, but it is still experimental.</li>
           </ul>
+        </article>
+        <article>
+          <h3>What it is trying to be</h3>
+          <p>
+            A local-first learning tool where curriculum modules publish review sources, the app
+            installs them from a catalogue, and learners review decks without pretending the
+            project is finished.
+          </p>
         </article>
         <article>
           <h3>Core links</h3>
@@ -55,6 +67,13 @@
             <li><a href="https://github.com/SleepyMario/linguistic-terminology">Linguistic Terminology source</a></li>
             <li>Curriculum repositories are being organized as package sources.</li>
           </ul>
+        </article>
+        <article>
+          <h3>Latest devlog</h3>
+          <p>
+            <a href="posts/wacksmacker-schmeckblacker-gladpecker.html">WackSmacker, Schmeckblacker, GladPecker, or something that actually sells?</a>
+            covers the Docker image, packaging VM path, and review UI work.
+          </p>
         </article>
       </section>
 
@@ -76,17 +95,90 @@
             <p>Foundation chapters, Core Chapters 1-5, and the first review deck are specified.</p>
             <p class="tagline">Chapter 1-5 review deck</p>
           </article>
+          <article>
+            <h3>Planned next languages</h3>
+            <p>Dutch, Japanese, German, French, and Spanish are planned next.</p>
+            <p class="tagline">Order may change while the package work settles.</p>
+          </article>
         </div>
       </section>
 
-      <section class="notice" aria-labelledby="post-heading">
-        <h2 id="post-heading">Latest Post</h2>
-        <p><a href="posts/wacksmacker-schmeckblacker-gladpecker.html">WackSmacker, Schmeckblacker, GladPecker, or something that actually sells?</a> is the current WhackSmacker pre-alpha devlog.</p>
+      <section id="modules" aria-labelledby="modules-heading">
+        <h2 id="modules-heading">Modules, Packages, And Review Decks</h2>
+        <div class="cards">
+          <article>
+            <h3>Review sources</h3>
+            <p>
+              A review source is the thing a learner actually studies: a deck-like set of prompts,
+              answers, notes, and examples. Current examples include Korean chapter ranges,
+              Chinese pronunciation conversion, and Vietnamese Chapter 1-5.
+            </p>
+          </article>
+          <article>
+            <h3>Package feed</h3>
+            <p>
+              Modules are packaged and listed in a catalogue feed, currently exposed inside the
+              Docker image at <code>/feed/catalogue.json</code>. The app can point at that catalogue
+              and install the available learning packages.
+            </p>
+          </article>
+          <article>
+            <h3>Local progress</h3>
+            <p>
+              The CLI is designed around local data, local progress, and explicit data paths.
+              That is why the Docker command below mounts a user-owned WhackSmacker data directory.
+            </p>
+          </article>
+          <article>
+            <h3>Still rough</h3>
+            <p>
+              The review interface, package metadata, examples, and language coverage are still
+              moving. Expect sharp edges, missing polish, and occasional nonsense until the alpha
+              line gets firmer.
+            </p>
+          </article>
+        </div>
       </section>
 
-      <section class="notice" aria-labelledby="planned-heading">
-        <h2 id="planned-heading">Planned Next Languages</h2>
-        <p>Dutch, Japanese, German, French, and Spanish are planned next. The order may change when the curriculum work starts misbehaving.</p>
+      <section id="docker" class="notice" aria-labelledby="docker-heading">
+        <h2 id="docker-heading">Docker Preview</h2>
+        <p>
+          The current public development image is
+          <code>sleepiestmario/whacksmacker:latest</code>. It is a pre-alpha convenience path,
+          not a stable release channel.
+        </p>
+        <pre><code>docker run --rm -it \
+  --user "$(id -u):$(id -g)" \
+  -e HOME=/data \
+  -v ~/.local/share/whacksmacker:/data \
+  sleepiestmario/whacksmacker:latest \
+  --data-dir /data \
+  --catalogue /feed/catalogue.json</code></pre>
+        <p>
+          The <code>--user</code> and <code>HOME=/data</code> parts keep generated progress and data
+          files owned by your normal user instead of root.
+        </p>
+      </section>
+
+      <section aria-labelledby="packaging-heading">
+        <h2 id="packaging-heading">Packaging Roadmap</h2>
+        <ol class="roadmap-list">
+          <li>Docker image</li>
+          <li>Gentoo package validation</li>
+          <li>Arch/AUR</li>
+          <li>Debian/Ubuntu <code>.deb</code></li>
+          <li>Fedora/openSUSE/RHEL-family <code>.rpm</code></li>
+          <li>Generic Linux tarball/AppImage</li>
+          <li>Maybe Flatpak/Snap/desktop wrapper later</li>
+        </ol>
+      </section>
+
+      <section class="notice" aria-labelledby="posts-heading">
+        <h2 id="posts-heading">Posts Stay Open</h2>
+        <p>
+          The <a href="posts/">posts page</a> remains available, including the current devlog:
+          <a href="posts/wacksmacker-schmeckblacker-gladpecker.html">WackSmacker, Schmeckblacker, GladPecker, or something that actually sells?</a>.
+        </p>
       </section>
     </main>
 
