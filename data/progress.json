@@ -2,6 +2,11 @@
   "milestones": [
     {
       "date": "2026-07-08",
+      "title": "Website homepage and navigation cleaned up",
+      "summary": "Moved Human Voice onto the homepage with a small archive page, removed the separate Posts section from public navigation, unified the top bar, and added a local preview helper for offline checks."
+    },
+    {
+      "date": "2026-07-08",
       "title": "First public Docker image path documented",
       "summary": "Added the pre-alpha Docker image path sleepiestmario/whacksmacker:latest."
     },
