@@ -27,6 +27,92 @@
         <p>This page reads from <code>data/progress.json</code>. It is a public snapshot, not a promise machine.</p>
       </section>
 
+      <section class="post" aria-labelledby="latest-update-heading">
+        <p class="post-meta">2026-07-09</p>
+        <h2 id="latest-update-heading">WhackSmacker milestone: cleaner content, stricter decks, and Mandarin Chapter 1-5</h2>
+        <p>
+          Today was a big quality pass for WSM. The headline is not just "more content";
+          it is that the content and package rules are getting much harder to fake.
+          WhackSmacker is still a pre-alpha public development preview, but it is turning
+          into a more usable language-learning package system.
+        </p>
+
+        <h3>Rules got stricter</h3>
+        <p>
+          The language curriculum rulebook is now the source of truth for future language
+          work. It formalizes pacing for early chapters, requires cumulative vocabulary,
+          and makes strict read-content examples mandatory for normal core review cards.
+          In plain terms: review examples should be real learner-facing sentences from the
+          chapter text, not convenient strings pulled from vocabulary tables, grammar notes,
+          metadata, generated fields, or authoring leftovers.
+        </p>
+        <p>
+          Review output also got easier to scan because examples now render as clean
+          bullets. Grammar summaries now follow the two-entry shape after each five-chapter
+          block: <code>Grammar -- Easy</code> and <code>Grammar -- Hard</code>.
+        </p>
+
+        <h3>Korean became the cleanup test case</h3>
+        <p>
+          Korean Chapter 1 was cleaned up as a concrete quality target. The learner-facing
+          title is now <strong>Names and First Greetings</strong>, authoring clutter was
+          removed, and dialogue names now use target-language forms. That means
+          <code>마리아</code>, not <code>Maria</code>, while Korean-origin names such as
+          <code>김민준</code> stay as full Korean names.
+        </p>
+        <p>
+          Korean now has Grammar Easy/Hard summaries for Chapters 1-5, 6-10, and 11-15.
+          The terminal UI also got a readability pass: no visible <code>code</code> labels
+          on learner read blocks, pink read/fenced blocks instead of the old very dark
+          block style, display-width table alignment for Hangul/CJK, hidden useless
+          <code>Status</code> clutter, normalized noun notes, a wider scrollable left pane,
+          stable content-pane borders, and clearer menu labels such as
+          <code>Ch N -- title</code>, <code>Han Gul N -- title</code>, and
+          <code>Grammar -- Easy</code>.
+        </p>
+
+        <h3>Mandarin Chapter 1-5 landed</h3>
+        <p>
+          Chinese Mandarin now has the first five core chapters in both Traditional and
+          Simplified. Traditional was treated as canonical, and Simplified was derived from
+          Traditional so the two tracks stay equivalent except for script.
+        </p>
+        <ul>
+          <li>Chapter 1: Greetings and Identity, with <code>我是N</code>.</li>
+          <li>Chapter 2: Saying My Name, with <code>我的名字是N</code>.</li>
+          <li>Chapter 3: Asking Names, with <code>你叫什麼名字？</code> / <code>你叫什么名字？</code>.</li>
+          <li>Chapter 4: Introducing This, with <code>這是N</code> / <code>这是N</code>.</li>
+          <li>Chapter 5: First Wellbeing Questions, with <code>你好嗎？</code> / <code>你好吗？</code>.</li>
+        </ul>
+        <p>
+          Each chapter has one grammar point, eight read-content lines, eight vocabulary
+          items, and cumulative progression. Traditional includes Traditional characters,
+          Pinyin, and Zhuyin. Simplified includes Simplified characters and Pinyin.
+        </p>
+        <p>
+          The Mandarin Traditional and Simplified Chapter 1-5 review decks each have 40
+          entries and 120 cards across English to Chinese, Chinese to English, and Pinyin
+          to Chinese directions. Strict example coverage passed.
+        </p>
+
+        <h3>Package path kept working</h3>
+        <p>
+          The package feed was rebuilt repeatedly through the package feed repo and checked
+          through <code>~/bin/wsm-run.sh</code>. Package generation also learned enough about
+          structured Chinese fields to match strict examples against the actual character
+          side instead of the whole pronunciation/meaning block.
+        </p>
+
+        <h3>Next steps</h3>
+        <p>
+          Next is more day-by-day language content, starting with Japanese Chapter 1-5.
+          Later work should also include a web GUI prototype for display toggles: Traditional
+          versus Simplified Chinese, Zhuyin/Pinyin display, metadata on/off, Korean Hanja
+          on/off, and similar switches. CLI options can follow after the toggle model feels
+          right.
+        </p>
+      </section>
+
       <section aria-labelledby="progress-heading">
         <h2 id="progress-heading">Recent Milestones</h2>
         <div id="progress-list" class="timeline" aria-live="polite">

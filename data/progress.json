@@ -1,6 +1,11 @@
 {
   "milestones": [
     {
+      "date": "2026-07-09",
+      "title": "Cleaner content, stricter decks, and Mandarin Chapter 1-5",
+      "summary": "Hardened the language curriculum rules, made normal review examples strict read-content-only bullets, cleaned Korean content/UI rough edges, completed Mandarin Traditional and Simplified Chapters 1-5 with 120-card review decks, and rebuilt the package feed through the local WSM wrapper path."
+    },
+    {
       "date": "2026-07-08",
       "title": "Website homepage and navigation cleaned up",
       "summary": "Moved Human Voice onto the homepage with a small archive page, removed the separate Posts section from public navigation, unified the top bar, and added a local preview helper for offline checks."
