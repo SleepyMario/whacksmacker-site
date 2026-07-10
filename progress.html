@@ -28,88 +28,66 @@
       </section>
 
       <section class="post" aria-labelledby="latest-update-heading">
-        <p class="post-meta">2026-07-09</p>
-        <h2 id="latest-update-heading">WhackSmacker milestone: cleaner content, stricter decks, and Mandarin Chapter 1-5</h2>
+        <p class="post-meta">2026-07-10</p>
+        <h2 id="latest-update-heading">WhackSmacker status: cleaner navigation, localized UI, and Korean Chapter 40</h2>
+        <h3>Human Voice</h3>
+        <p>Today the CLI got polished a bit more and some language chapters were added. For Korean we're at chapter 40, and it seems that we're getting into high beginner territory. Also implemented is Traditional Chinese as one of the UI languages, but a lot of polishing is needed still.</p>
+
+        <h3>Technical update</h3>
         <p>
-          Today was a big quality pass for WSM. The headline is not just "more content";
-          it is that the content and package rules are getting much harder to fake.
-          WhackSmacker is still a pre-alpha public development preview, but it is turning
-          into a more usable language-learning package system.
+          The latest WSM work brings a cleaner terminal layout, the first app-level source-language
+          choices, more useful review-deck status feedback, and Korean content through Chapter 40.
+          It remains a pre-alpha project, and the Traditional Chinese UI still needs polishing.
         </p>
 
-        <h3>Rules got stricter</h3>
+        <h3>Cleaner CLI navigation</h3>
         <p>
-          The language curriculum rulebook is now the source of truth for future language
-          work. It formalizes pacing for early chapters, requires cumulative vocabulary,
-          and makes strict read-content examples mandatory for normal core review cards.
-          In plain terms: review examples should be real learner-facing sentences from the
-          chapter text, not convenient strings pulled from vocabulary tables, grammar notes,
-          metadata, generated fields, or authoring leftovers.
-        </p>
-        <p>
-          Review output also got easier to scan because examples now render as clean
-          bullets. Grammar summaries now follow the two-entry shape after each five-chapter
-          block: <code>Grammar -- Easy</code> and <code>Grammar -- Hard</code>.
+          The CLI/TUI now uses a cleaner three-pane layout: left navigation, a middle
+          <strong>Output</strong> pane, and a right <strong>Toggles</strong> pane. The Toggles pane
+          currently holds an orange source-language toggle showing only <strong>English</strong>
+          and <strong>中文（臺灣）</strong>. Left and right movement switches directly between
+          navigation and Toggles, skipping Output. The old source-language entry has been removed
+          from the left-pane Settings menu.
         </p>
 
-        <h3>Korean became the cleanup test case</h3>
+        <h3>English and Traditional Chinese UI options</h3>
         <p>
-          Korean Chapter 1 was cleaned up as a concrete quality target. The learner-facing
-          title is now <strong>Names and First Greetings</strong>, authoring clutter was
-          removed, and dialogue names now use target-language forms. That means
-          <code>마리아</code>, not <code>Maria</code>, while Korean-origin names such as
-          <code>김민준</code> stay as full Korean names.
-        </p>
-        <p>
-          Korean now has Grammar Easy/Hard summaries for Chapters 1-5, 6-10, and 11-15.
-          The terminal UI also got a readability pass: no visible <code>code</code> labels
-          on learner read blocks, pink read/fenced blocks instead of the old very dark
-          block style, display-width table alignment for Hangul/CJK, hidden useless
-          <code>Status</code> clutter, normalized noun notes, a wider scrollable left pane,
-          stable content-pane borders, and clearer menu labels such as
-          <code>Ch N -- title</code>, <code>Han Gul N -- title</code>, and
-          <code>Grammar -- Easy</code>.
+          English (<code>en-US</code>) and Traditional Chinese for Taiwan
+          (<code>zh-Hant-TW</code>) are now supported as app/source-language UI options. App strings
+          use the selected language with fallback, and package, content, and review metadata can
+          provide localized source-content values. Existing plain English strings remain valid and
+          fall back correctly. This is app and metadata infrastructure, not a full curriculum
+          translation, and the Traditional Chinese UI still has plenty of rough edges.
         </p>
 
-        <h3>Mandarin Chapter 1-5 landed</h3>
+        <h3>Review decks show their state</h3>
         <p>
-          Chinese Mandarin now has the first five core chapters in both Traditional and
-          Simplified. Traditional was treated as canonical, and Simplified was derived from
-          Traditional so the two tracks stay equivalent except for script.
-        </p>
-        <ul>
-          <li>Chapter 1: Greetings and Identity, with <code>我是N</code>.</li>
-          <li>Chapter 2: Saying My Name, with <code>我的名字是N</code>.</li>
-          <li>Chapter 3: Asking Names, with <code>你叫什麼名字？</code> / <code>你叫什么名字？</code>.</li>
-          <li>Chapter 4: Introducing This, with <code>這是N</code> / <code>这是N</code>.</li>
-          <li>Chapter 5: First Wellbeing Questions, with <code>你好嗎？</code> / <code>你好吗？</code>.</li>
-        </ul>
-        <p>
-          Each chapter has one grammar point, eight read-content lines, eight vocabulary
-          items, and cumulative progression. Traditional includes Traditional characters,
-          Pinyin, and Zhuyin. Simplified includes Simplified characters and Pinyin.
-        </p>
-        <p>
-          The Mandarin Traditional and Simplified Chapter 1-5 review decks each have 40
-          entries and 120 cards across English to Chinese, Chinese to English, and Pinyin
-          to Chinese directions. Strict example coverage passed.
+          Review decks now use visible colors for status: magenta for not started, yellow when cards
+          are available, blue when no cards are due, and green when finished. The output pane can
+          report <q>There are &lt;number&gt; cards to review.</q>, and deck status updates live as review
+          progress changes.
         </p>
 
-        <h3>Package path kept working</h3>
+        <h3>Korean reaches Chapter 40</h3>
         <p>
-          The package feed was rebuilt repeatedly through the package feed repo and checked
-          through <code>~/bin/wsm-run.sh</code>. Package generation also learned enough about
-          structured Chinese fields to match strict examples against the actual character
-          side instead of the whole pronunciation/meaning block.
+          Korean content now reaches Chapter 40, moving from absolute beginner toward high beginner
+          territory. Chapters 31–40 use the newer structure: odd chapters are dialogues, even
+          chapters are narratives, and every chapter introduces two grammar points with one serving
+          as a connector or linking point. Sentences are also becoming longer and more varied while
+          earlier grammar continues to return naturally.
+        </p>
+        <p>
+          Earlier expansion also added the English module, extended multiple languages through their
+          early chapter blocks, and moved Vietnamese further ahead than most of the other language
+          tracks.
         </p>
 
-        <h3>Next steps</h3>
+        <h3>Curriculum rules are harder to forget</h3>
         <p>
-          Next is more day-by-day language content, starting with Japanese Chapter 1-5.
-          Later work should also include a web GUI prototype for display toggles: Traditional
-          versus Simplified Chinese, Zhuyin/Pinyin display, metadata on/off, Korean Hanja
-          on/off, and similar switches. CLI options can follow after the toggle model feels
-          right.
+          The odd/even rule is now explicit and checked in generated packages and tests: odd chapters
+          are dialogues and even chapters are narratives. Normal review-card examples also remain
+          strict: each example must be a literal learner-facing read-content sentence, and examples
+          render as bullets.
         </p>
       </section>
 

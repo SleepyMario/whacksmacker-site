@@ -1,6 +1,11 @@
 {
   "milestones": [
     {
+      "date": "2026-07-10",
+      "title": "Cleaner CLI, localized UI options, and Korean Chapter 40",
+      "summary": "Polished the three-pane CLI navigation and live review-deck statuses, added en-US and zh-Hant-TW app/source-language support with fallback and localized metadata, extended Korean through Chapter 40 under the stricter odd/even and connector rules, and kept review examples tied to literal learner-facing read content."
+    },
+    {
       "date": "2026-07-09",
       "title": "Cleaner content, stricter decks, and Mandarin Chapter 1-5",
       "summary": "Hardened the language curriculum rules, made normal review examples strict read-content-only bullets, cleaned Korean content/UI rough edges, completed Mandarin Traditional and Simplified Chapters 1-5 with 120-card review decks, and rebuilt the package feed through the local WSM wrapper path."
