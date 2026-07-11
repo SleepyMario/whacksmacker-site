@@ -28,66 +28,57 @@
       </section>
 
       <section class="post" aria-labelledby="latest-update-heading">
-        <p class="post-meta">2026-07-10</p>
-        <h2 id="latest-update-heading">WhackSmacker status: cleaner navigation, localized UI, and Korean Chapter 40</h2>
+        <p class="post-meta">2026-07-11</p>
+        <h2 id="latest-update-heading">WhackSmacker Public Alpha Is Online</h2>
         <h3>Human Voice</h3>
-        <p>Today the CLI got polished a bit more and some language chapters were added. For Korean we're at chapter 40, and it seems that we're getting into high beginner territory. Also implemented is Traditional Chinese as one of the UI languages, but a lot of polishing is needed still.</p>
+        <p>A lot got done, but the most important thing is that it's all online now. The rest is just fiddling in the margins. If you want to use this, use the CLI for now, that one is actually pretty usable. The web frontend is just pre-alpha.</p>
 
-        <h3>Technical update</h3>
+        <h3>The alpha is genuinely online</h3>
         <p>
-          The latest WSM work brings a cleaner terminal layout, the first app-level source-language
-          choices, more useful review-deck status feedback, and Korean content through Chapter 40.
-          It remains a pre-alpha project, and the Traditional Chinese UI still needs polishing.
-        </p>
-
-        <h3>Cleaner CLI navigation</h3>
-        <p>
-          The CLI/TUI now uses a cleaner three-pane layout: left navigation, a middle
-          <strong>Output</strong> pane, and a right <strong>Toggles</strong> pane. The Toggles pane
-          currently holds an orange source-language toggle showing only <strong>English</strong>
-          and <strong>中文（臺灣）</strong>. Left and right movement switches directly between
-          navigation and Toggles, skipping Output. The old source-language entry has been removed
-          from the left-pane Settings menu.
-        </p>
-
-        <h3>English and Traditional Chinese UI options</h3>
-        <p>
-          English (<code>en-US</code>) and Traditional Chinese for Taiwan
-          (<code>zh-Hant-TW</code>) are now supported as app/source-language UI options. App strings
-          use the selected language with fallback, and package, content, and review metadata can
-          provide localized source-content values. Existing plain English strings remain valid and
-          fall back correctly. This is app and metadata infrastructure, not a full curriculum
-          translation, and the Traditional Chinese UI still has plenty of rough edges.
-        </p>
-
-        <h3>Review decks show their state</h3>
-        <p>
-          Review decks now use visible colors for status: magenta for not started, yellow when cards
-          are available, blue when no cards are due, and green when finished. The output pane can
-          report <q>There are &lt;number&gt; cards to review.</q>, and deck status updates live as review
-          progress changes.
-        </p>
-
-        <h3>Korean reaches Chapter 40</h3>
-        <p>
-          Korean content now reaches Chapter 40, moving from absolute beginner toward high beginner
-          territory. Chapters 31–40 use the newer structure: odd chapters are dialogues, even
-          chapters are narratives, and every chapter introduces two grammar points with one serving
-          as a connector or linking point. Sentences are also becoming longer and more varied while
-          earlier grammar continues to return naturally.
+          WhackSmacker <code>0.1.0-alpha.1</code> is now publicly deployed at
+          <a href="https://alpha.whacksmacker.com">alpha.whacksmacker.com</a>. The existing website at
+          <code>www.whacksmacker.com</code> remains unchanged; that complete website move,
+          <code>/developer-notes/</code> integration, and the final public experience are still later work.
         </p>
         <p>
-          Earlier expansion also added the English module, extended multiple languages through their
-          early chapter blocks, and moved Vietnamese further ahead than most of the other language
-          tracks.
+          The practical recommendation is still the CLI. It is the usable interface today. The web
+          frontend is pre-alpha: useful for seeing where the project is going, but not a polished or
+          generally usable interface yet. The logged-in source-language control is also known
+          follow-up work.
         </p>
 
-        <h3>Curriculum rules are harder to forget</h3>
+        <h3>A real multi-user deployment</h3>
         <p>
-          The odd/even rule is now explicit and checked in generated packages and tests: odd chapters
-          are dialogues and even chapters are narratives. Normal review-card examples also remain
-          strict: each example must be a literal learner-facing read-content sentence, and examples
-          render as bullets.
+          The deployed application runs in PostgreSQL multi-user mode, with no public registration.
+          Password authentication, persistent sessions, CSRF protection, Origin checking, login
+          throttling, and per-user state isolation are active. The PostgreSQL migrations completed
+          successfully, and both the production application and database containers are healthy.
+        </p>
+        <p>
+          Public traffic reaches the deployment through Nginx on the DigitalOcean VPS, while Nginx
+          reaches the WhackSmacker backend over the public-services ZeroTier network. HTTPS is active
+          for the alpha domain.
+        </p>
+
+        <h3>Image, packages, and curriculum</h3>
+        <p>
+          The Docker image was built, validated, and published as
+          <code>sleepiestmario/whacksmacker:0.1.0-alpha.1</code> and
+          <code>sleepiestmario/whacksmacker:alpha</code>. The package feed was rebuilt successfully
+          with the current language packages, and the curriculum system now enforces the canonical
+          thirty-person recurring casts.
+        </p>
+
+        <h3>Checks before going online</h3>
+        <p>
+          The complete ordinary test suite passed with 359 passing tests, zero failures, and one
+          deliberately skipped PostgreSQL integration test. PostgreSQL behavior had also been tested
+          separately. That does not make the frontend finished, but it does mean this milestone is
+          more than a mock-up: the system is deployed, healthy, and available.
+        </p>
+        <p>
+          See the <a href="https://github.com/SleepyMario/whacksmacker">WhackSmacker source on GitHub</a>
+          or open <a href="https://alpha.whacksmacker.com">the public alpha</a>.
         </p>
       </section>
 

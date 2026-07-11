@@ -1,6 +1,11 @@
 {
   "milestones": [
     {
+      "date": "2026-07-11",
+      "title": "WhackSmacker Public Alpha Is Online",
+      "summary": "Deployed WhackSmacker 0.1.0-alpha.1 publicly with PostgreSQL multi-user mode, authentication and request protections, healthy application and database containers, HTTPS, rebuilt language packages, enforced canonical recurring casts, and a fully passing ordinary test suite. The CLI is recommended; the web frontend remains pre-alpha."
+    },
+    {
       "date": "2026-07-10",
       "title": "Cleaner CLI, localized UI options, and Korean Chapter 40",
       "summary": "Polished the three-pane CLI navigation and live review-deck statuses, added en-US and zh-Hant-TW app/source-language support with fallback and localized metadata, extended Korean through Chapter 40 under the stricter odd/even and connector rules, and kept review examples tied to literal learner-facing read content."
