@@ -4,3 +4,4 @@
 *.wspkg
 *.apkg
 node_modules/
+dist/

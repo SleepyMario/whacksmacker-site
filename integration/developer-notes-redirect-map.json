@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "redirects": [
+    {
+      "from": "/",
+      "to": "/developer-notes/",
+      "status": 301,
+      "note": "Move the current public path under the frontend-owned prefix."
+    },
+    {
+      "from": "/index.html",
+      "to": "/developer-notes/",
+      "status": 301,
+      "note": "Preserve the existing index-file alias."
+    },
+    {
+      "from": "/downloads.html",
+      "to": "/developer-notes/downloads.html",
+      "status": 301,
+      "note": "Move the current public path under the frontend-owned prefix."
+    },
+    {
+      "from": "/progress.html",
+      "to": "/developer-notes/progress.html",
+      "status": 301,
+      "note": "Move the current public path under the frontend-owned prefix."
+    },
+    {
+      "from": "/roadmap.html",
+      "to": "/developer-notes/roadmap.html",
+      "status": 301,
+      "note": "Move the current public path under the frontend-owned prefix."
+    },
+    {
+      "from": "/human-voice/",
+      "to": "/developer-notes/human-voice/",
+      "status": 301,
+      "note": "Move the current public path under the frontend-owned prefix."
+    },
+    {
+      "from": "/human-voice/index.html",
+      "to": "/developer-notes/human-voice/",
+      "status": 301,
+      "note": "Preserve the existing index-file alias."
+    },
+    {
+      "from": "/styles.css",
+      "to": "/developer-notes/styles.css",
+      "status": 301,
+      "note": "Move the current public path under the frontend-owned prefix."
+    },
+    {
+      "from": "/assets/progress.js",
+      "to": "/developer-notes/assets/progress.js",
+      "status": 301,
+      "note": "Move the current public path under the frontend-owned prefix."
+    },
+    {
+      "from": "/assets/terminal-preview.svg",
+      "to": "/developer-notes/assets/terminal-preview.svg",
+      "status": 301,
+      "note": "Move the current public path under the frontend-owned prefix."
+    },
+    {
+      "from": "/data/progress.json",
+      "to": "/developer-notes/data/progress.json",
+      "status": 301,
+      "note": "Move the current public path under the frontend-owned prefix."
+    }
+  ]
+}

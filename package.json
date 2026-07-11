@@ -1,0 +1,8 @@
+{
+  "name": "whacksmacker-site",
+  "private": true,
+  "scripts": {
+    "build:developer-notes": "node scripts/build-developer-notes.mjs",
+    "check:developer-notes": "node scripts/build-developer-notes.mjs --check"
+  }
+}
