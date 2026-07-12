@@ -1,6 +1,11 @@
 {
   "milestones": [
     {
+      "date": "2026-07-12",
+      "title": "Alpha.2 Web Reader and Curriculum Polish",
+      "summary": "Deployed the authenticated alpha.2 curriculum reader, installed the bundled package set, polished the Normal and Developer CLI views, and updated the Dutch curriculum through Chapter 15."
+    },
+    {
       "date": "2026-07-11",
       "title": "WhackSmacker Public Alpha Is Online",
       "summary": "Deployed WhackSmacker 0.1.0-alpha.1 publicly with PostgreSQL multi-user mode, authentication and request protections, healthy application and database containers, HTTPS, rebuilt language packages, enforced canonical recurring casts, and a fully passing ordinary test suite. The CLI is recommended; the web frontend remains pre-alpha."

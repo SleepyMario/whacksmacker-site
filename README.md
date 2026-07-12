@@ -30,6 +30,10 @@ http://localhost:8000/
 
 The progress page fetches `data/progress.json`, so preview it through a static server rather than opening `progress.html` directly from the filesystem.
 
+## Editorial Updates
+
+`editorial/website-update-rules.md` is the canonical website-update policy. Session-ending update preparation must review and summarize `editorial/checklists/update-review-checklist.md`, and `npm run validate:editorial` must pass before publication.
+
 ## Deployment Notes
 
 1. Create or connect the GitHub repository for this site.

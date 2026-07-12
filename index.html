@@ -28,7 +28,7 @@
           <p>
             WhackSmacker is a small, practical learning project built around curriculum packages,
             native review sources, package feeds, and a terminal-first workflow. It is not stable
-            software yet. It is a public pre-alpha workshop with the doors open.
+            software yet. It is a public alpha workshop with the doors open.
           </p>
           <div class="actions">
             <a class="button" href="https://github.com/SleepyMario/whacksmacker">WhackSmacker on GitHub</a>
@@ -45,7 +45,7 @@
         <article>
           <h3>Development state</h3>
           <ul>
-            <li>Public development preview / pre-alpha.</li>
+            <li>Public development preview / alpha.</li>
             <li>Not stable, not polished, and not ready for serious study routines.</li>
             <li>Package/content system in active development.</li>
             <li>Docker image exists, but it is still experimental.</li>
@@ -82,6 +82,11 @@
         <p class="section-note">Short project notes from Ashwin directly; for earlier voice acting please click <a href="human-voice/">here</a>.</p>
         <div class="cards">
           <article>
+            <p class="post-meta">Ashwin - 2026-07-12</p>
+            <h3>Alpha.2 Web Reader and Curriculum Polish</h3>
+            <p>Mainly polishing. This is going pretty solid.</p>
+          </article>
+          <article>
             <p class="post-meta">Ashwin - 2026-07-11</p>
             <h3>WhackSmacker Public Alpha Is Online</h3>
             <p>A lot got done, but the most important thing is that it's all online now. The rest is just fiddling in the margins. If you want to use this, use the CLI for now, that one is actually pretty usable. The web frontend is just pre-alpha.</p>
@@ -112,7 +117,7 @@
       <section id="content-status" aria-labelledby="content-heading">
         <h2 id="content-heading">Language And Content Status</h2>
         <p class="section-note">
-          All of this is still pre-alpha. The app is usable for development testing and personal
+          All of this is still alpha. The app is usable for development testing and personal
           validation, not stable public study use. Review decks exist for multiple modules, but
           content quality is still being corrected.
         </p>
@@ -271,14 +276,14 @@
         <h2 id="docker-heading">Docker Preview</h2>
         <p>
           The current public development image is
-          <code>sleepiestmario/whacksmacker:latest</code>. It is a pre-alpha convenience path,
+          <code>sleepiestmario/whacksmacker:0.1.0-alpha.2</code>. It is an alpha convenience path,
           not a stable release channel.
         </p>
         <pre><code>docker run --rm -it \
   --user "$(id -u):$(id -g)" \
   -e HOME=/data \
   -v ~/.local/share/whacksmacker:/data \
-  sleepiestmario/whacksmacker:latest \
+  sleepiestmario/whacksmacker:0.1.0-alpha.2 \
   --data-dir /data \
   --catalogue /feed/catalogue.json</code></pre>
         <p>

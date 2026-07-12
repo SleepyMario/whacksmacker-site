@@ -28,57 +28,56 @@
       </section>
 
       <section class="post" aria-labelledby="latest-update-heading">
-        <p class="post-meta">2026-07-11</p>
-        <h2 id="latest-update-heading">WhackSmacker Public Alpha Is Online</h2>
+        <p class="post-meta">2026-07-12</p>
+        <h2 id="latest-update-heading">Alpha.2 Web Reader and Curriculum Polish</h2>
         <h3>Human Voice</h3>
-        <p>A lot got done, but the most important thing is that it's all online now. The rest is just fiddling in the margins. If you want to use this, use the CLI for now, that one is actually pretty usable. The web frontend is just pre-alpha.</p>
+        <p>Mainly polishing. This is going pretty solid.</p>
 
-        <h3>The alpha is genuinely online</h3>
+        <h3>Alpha.2 web reader</h3>
         <p>
-          WhackSmacker <code>0.1.0-alpha.1</code> is now publicly deployed at
-          <a href="https://alpha.whacksmacker.com">alpha.whacksmacker.com</a>. The existing website at
-          <code>www.whacksmacker.com</code> remains unchanged; that complete website move,
-          <code>/developer-notes/</code> integration, and the final public experience are still later work.
+          WhackSmacker <code>0.1.0-alpha.2</code> was built, published, and deployed. The authenticated
+          web curriculum reader now supports login, per-user curriculum access, exact package versions,
+          source-language selection, chapter reading and navigation, safe rendering, browser-state
+          restoration, and responsive layouts. It remains alpha software.
         </p>
         <p>
-          The practical recommendation is still the CLI. It is the usable interface today. The web
-          frontend is pre-alpha: useful for seeing where the project is going, but not a polished or
-          generally usable interface yet. The logged-in source-language control is also known
-          follow-up work.
+          Open <a href="https://alpha.whacksmacker.com">the public alpha</a> or use
+          <code>sleepiestmario/whacksmacker:0.1.0-alpha.2</code>.
         </p>
 
-        <h3>A real multi-user deployment</h3>
+        <h3>Deployment and packages</h3>
         <p>
-          The deployed application runs in PostgreSQL multi-user mode, with no public registration.
-          Password authentication, persistent sessions, CSRF protection, Origin checking, login
-          throttling, and per-user state isolation are active. The PostgreSQL migrations completed
-          successfully, and both the production application and database containers are healthy.
-        </p>
-        <p>
-          Public traffic reaches the deployment through Nginx on the DigitalOcean VPS, while Nginx
-          reaches the WhackSmacker backend over the public-services ZeroTier network. HTTPS is active
-          for the alpha domain.
+          Deployment and rollback handling were repaired. All twelve bundled packages were installed,
+          and all ten ordinary curricula were enabled for the existing accounts. English currently
+          appears in the new web reader; nine older curriculum packages need regenerated localization
+          metadata before they will appear in the new selector.
         </p>
 
-        <h3>Image, packages, and curriculum</h3>
+        <h3>CLI polish</h3>
         <p>
-          The Docker image was built, validated, and published as
-          <code>sleepiestmario/whacksmacker:0.1.0-alpha.1</code> and
-          <code>sleepiestmario/whacksmacker:alpha</code>. The package feed was rebuilt successfully
-          with the current language packages, and the curriculum system now enforces the canonical
-          thirty-person recurring casts.
+          The terminal curriculum reader now has Normal and Developer views. Normal is the default
+          learner-facing view; Developer exposes the complete curriculum metadata and authoring
+          information. Vocabulary and grammar presentation were also polished.
         </p>
 
-        <h3>Checks before going online</h3>
+        <h3>Curriculum updated</h3>
         <p>
-          The complete ordinary test suite passed with 359 passing tests, zero failures, and one
-          deliberately skipped PostgreSQL integration test. PostgreSQL behavior had also been tested
-          separately. That does not make the frontend finished, but it does mean this milestone is
-          more than a mock-up: the system is deployed, healthy, and available.
+          <strong>Dutch — updated through Chapter 15.</strong> Chapters 1–15, all three five-chapter
+          review decks, and all three Grammar Easy/Hard summary pairs were updated. The content was
+          checked in the real CLI. Chapter 16 has not yet been created.
+        </p>
+
+        <h3>Validation and next work</h3>
+        <p>
+          Focused curriculum, package, reader, and interactive checks passed. One known unrelated
+          review-tree repaint failure remains. The last broad run encountered hanging PostgreSQL-auth
+          processes, so it was not a fully completed clean suite.
         </p>
         <p>
-          See the <a href="https://github.com/SleepyMario/whacksmacker">WhackSmacker source on GitHub</a>
-          or open <a href="https://alpha.whacksmacker.com">the public alpha</a>.
+          Next curriculum work is Dutch Chapters 16–20. Next web-package work is regenerating the nine
+          older curricula with compatible manifest metadata. Open
+          <a href="https://alpha.whacksmacker.com">the public alpha</a> or see the
+          <a href="https://github.com/SleepyMario/whacksmacker">public WhackSmacker repository on GitHub</a>.
         </p>
       </section>
 

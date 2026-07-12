@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/website-update-policy-v1.schema.json",
+  "title": "WhackSmacker website update policy version 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema", "schemaVersion", "policyVersion", "lastUpdated",
+    "canonicalMarkdownPath", "sessionCloseProtocolPath", "declaredCanonicalFiles",
+    "requiredWebsiteTargets", "humanVoice", "technicalStyle", "changedModulesOnly",
+    "curriculumSummary", "historicalEntries", "privacyRestrictions",
+    "protectedDefaultNoBroadRewrite", "requiredValidationCommands"
+  ],
+  "properties": {
+    "$schema": { "const": "../schemas/website-update-policy-v1.schema.json" },
+    "schemaVersion": { "const": 1 },
+    "policyVersion": { "const": 1 },
+    "lastUpdated": { "type": "string", "format": "date" },
+    "canonicalMarkdownPath": { "const": "editorial/website-update-rules.md" },
+    "sessionCloseProtocolPath": { "const": "editorial/session-close-update-protocol.md" },
+    "declaredCanonicalFiles": { "type": "array", "minItems": 8, "uniqueItems": true, "items": { "type": "string" } },
+    "requiredWebsiteTargets": {
+      "type": "array", "minItems": 4, "uniqueItems": true,
+      "items": { "enum": ["index.html", "human-voice/index.html", "progress.html", "data/progress.json"] }
+    },
+    "humanVoice": {
+      "type": "object", "additionalProperties": false,
+      "required": ["preserveVerbatim", "sameTextInAllHtmlTargets", "combinedUpdateSubsectionOnly", "mayReplaceTechnicalUpdateOnlyWhenExplicitlyRequested"],
+      "properties": {
+        "preserveVerbatim": { "const": true },
+        "sameTextInAllHtmlTargets": { "const": true },
+        "combinedUpdateSubsectionOnly": { "const": true },
+        "mayReplaceTechnicalUpdateOnlyWhenExplicitlyRequested": { "const": true }
+      }
+    },
+    "technicalStyle": {
+      "type": "object", "additionalProperties": false,
+      "required": ["outcomeFocused", "publicFacing", "avoidWorkDiary", "avoidInternalHandoffCopy"],
+      "properties": {
+        "outcomeFocused": { "const": true }, "publicFacing": { "const": true },
+        "avoidWorkDiary": { "const": true }, "avoidInternalHandoffCopy": { "const": true }
+      }
+    },
+    "changedModulesOnly": { "const": true },
+    "curriculumSummary": {
+      "type": "object", "additionalProperties": false,
+      "required": ["includeChapterRangeOrTotal", "includeReviewAndSummaryStatusWhenMateriallyChanged", "includeNextChapterExistenceWhenClarifying", "omitUnchangedCurricula"],
+      "properties": {
+        "includeChapterRangeOrTotal": { "const": true },
+        "includeReviewAndSummaryStatusWhenMateriallyChanged": { "const": true },
+        "includeNextChapterExistenceWhenClarifying": { "const": true },
+        "omitUnchangedCurricula": { "const": true }
+      }
+    },
+    "historicalEntries": {
+      "type": "object", "additionalProperties": false,
+      "required": ["preserveDatedEntries", "correctOnlyStaleCurrentClaims"],
+      "properties": { "preserveDatedEntries": { "const": true }, "correctOnlyStaleCurrentClaims": { "const": true } }
+    },
+    "privacyRestrictions": { "type": "array", "minItems": 12, "uniqueItems": true, "items": { "type": "string" } },
+    "protectedDefaultNoBroadRewrite": { "type": "array", "minItems": 7, "uniqueItems": true, "items": { "type": "string" } },
+    "requiredValidationCommands": { "type": "array", "minItems": 3, "uniqueItems": true, "items": { "type": "string" } }
+  }
+}

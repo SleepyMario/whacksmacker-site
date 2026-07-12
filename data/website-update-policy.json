@@ -1,0 +1,75 @@
+{
+  "$schema": "../schemas/website-update-policy-v1.schema.json",
+  "schemaVersion": 1,
+  "policyVersion": 1,
+  "lastUpdated": "2026-07-12",
+  "canonicalMarkdownPath": "editorial/website-update-rules.md",
+  "sessionCloseProtocolPath": "editorial/session-close-update-protocol.md",
+  "declaredCanonicalFiles": [
+    "editorial/website-update-rules.md",
+    "editorial/session-close-update-protocol.md",
+    "editorial/templates/daily-update.md",
+    "editorial/checklists/update-review-checklist.md",
+    "editorial/policy-history.md",
+    "data/website-update-policy.json",
+    "schemas/website-update-policy-v1.schema.json",
+    "scripts/validate-website-update-policy.mjs"
+  ],
+  "requiredWebsiteTargets": [
+    "index.html",
+    "human-voice/index.html",
+    "progress.html",
+    "data/progress.json"
+  ],
+  "humanVoice": {
+    "preserveVerbatim": true,
+    "sameTextInAllHtmlTargets": true,
+    "combinedUpdateSubsectionOnly": true,
+    "mayReplaceTechnicalUpdateOnlyWhenExplicitlyRequested": true
+  },
+  "technicalStyle": {
+    "outcomeFocused": true,
+    "publicFacing": true,
+    "avoidWorkDiary": true,
+    "avoidInternalHandoffCopy": true
+  },
+  "changedModulesOnly": true,
+  "curriculumSummary": {
+    "includeChapterRangeOrTotal": true,
+    "includeReviewAndSummaryStatusWhenMateriallyChanged": true,
+    "includeNextChapterExistenceWhenClarifying": true,
+    "omitUnchangedCurricula": true
+  },
+  "historicalEntries": {
+    "preserveDatedEntries": true,
+    "correctOnlyStaleCurrentClaims": true
+  },
+  "privacyRestrictions": [
+    "passwords",
+    "tokens",
+    "cookies",
+    "session-or-csrf-values",
+    "env-contents",
+    "database-connection-strings",
+    "unapproved-private-account-names",
+    "internal-ip-addresses",
+    "private-hostnames",
+    "private-paths",
+    "backup-paths",
+    "unpublished-credentials"
+  ],
+  "protectedDefaultNoBroadRewrite": [
+    "styles.css",
+    "navigation",
+    "roadmap.html",
+    "downloads.html",
+    "unrelated-homepage-sections",
+    "module-cards",
+    "historical-entries"
+  ],
+  "requiredValidationCommands": [
+    "npm run validate:editorial",
+    "npm run build:developer-notes",
+    "git diff --check"
+  ]
+}
