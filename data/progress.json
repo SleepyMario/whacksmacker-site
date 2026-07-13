@@ -1,6 +1,11 @@
 {
   "milestones": [
     {
+      "date": "2026-07-13",
+      "title": "Core and Curricula Split",
+      "summary": "Published and deployed WhackSmacker 0.1.0-alpha.3 with independent public core review decks, privately packaged authored reading curricula, an operational split deployment, Dutch Chapters 1–25, and hardened health checks and rollback."
+    },
+    {
       "date": "2026-07-12",
       "title": "Alpha.2 Web Reader and Curriculum Polish",
       "summary": "Deployed the authenticated alpha.2 curriculum reader, installed the bundled package set, polished the Normal and Developer CLI views, and updated the Dutch curriculum through Chapter 15."

@@ -10,7 +10,7 @@ Concise public title
 
 ## Human Voice
 
-Paste Ashwin's Human Voice verbatim. It must match, unchanged, in all three HTML locations.
+Paste only Human Voice supplied by Ashwin, verbatim. It must match, unchanged, in all three HTML locations. Never generate or substitute it; if none was supplied, leave this section pending.
 
 ## Technical outcomes
 

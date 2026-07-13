@@ -28,8 +28,40 @@
       </section>
 
       <section class="post" aria-labelledby="latest-update-heading">
+        <p class="post-meta">2026-07-13</p>
+        <h2 id="latest-update-heading">Core and Curricula Split</h2>
+        <h3>Human Voice</h3>
+        <p>It's completely ridiculous obviously, but it works.</p>
+
+        <h3>Core and curriculum packaging</h3>
+        <p>
+          WhackSmacker <code>0.1.0-alpha.3</code> was published and deployed. The public core image now
+          contains the GPL application and independent core review decks, while authored reading
+          curricula are separated into a private CC BY-NC 4.0 curricula image. Reading content and
+          review decks work independently and can still link through stable package metadata. Dutch
+          Chapters 1–25 are available.
+        </p>
+
+        <h3>Docker deployment</h3>
+        <p>
+          The split deployment is operational online. Login, persistent accounts, reading, and review
+          access were verified. Deployment checks now use container health and the in-container health
+          endpoint instead of assuming host localhost is bound; rollback preserves volumes and restores
+          the exact prior configuration and image references.
+        </p>
+
+        <h3>Validation</h3>
+        <p>
+          Focused content-split tests passed: 127 passed, 0 failed. Deployment-script tests
+          passed 12/12, web-health tests passed 7/7, and online deployment and account/content smoke
+          checks passed. The known unrelated review-tree repaint failure remains unchanged, so no
+          completely clean full-suite run is claimed.
+        </p>
+      </section>
+
+      <section class="post" aria-labelledby="previous-update-heading">
         <p class="post-meta">2026-07-12</p>
-        <h2 id="latest-update-heading">Alpha.2 Web Reader and Curriculum Polish</h2>
+        <h2 id="previous-update-heading">Alpha.2 Web Reader and Curriculum Polish</h2>
         <h3>Human Voice</h3>
         <p>Mainly polishing. This is going pretty solid.</p>
 

@@ -14,7 +14,7 @@
   "properties": {
     "$schema": { "const": "../schemas/website-update-policy-v1.schema.json" },
     "schemaVersion": { "const": 1 },
-    "policyVersion": { "const": 1 },
+    "policyVersion": { "const": 2 },
     "lastUpdated": { "type": "string", "format": "date" },
     "canonicalMarkdownPath": { "const": "editorial/website-update-rules.md" },
     "sessionCloseProtocolPath": { "const": "editorial/session-close-update-protocol.md" },
@@ -25,8 +25,11 @@
     },
     "humanVoice": {
       "type": "object", "additionalProperties": false,
-      "required": ["preserveVerbatim", "sameTextInAllHtmlTargets", "combinedUpdateSubsectionOnly", "mayReplaceTechnicalUpdateOnlyWhenExplicitlyRequested"],
+      "required": ["ownerSuppliedOnly", "neverGenerateOrSubstitute", "leavePendingWhenMissing", "preserveVerbatim", "sameTextInAllHtmlTargets", "combinedUpdateSubsectionOnly", "mayReplaceTechnicalUpdateOnlyWhenExplicitlyRequested"],
       "properties": {
+        "ownerSuppliedOnly": { "const": true },
+        "neverGenerateOrSubstitute": { "const": true },
+        "leavePendingWhenMissing": { "const": true },
         "preserveVerbatim": { "const": true },
         "sameTextInAllHtmlTargets": { "const": true },
         "combinedUpdateSubsectionOnly": { "const": true },

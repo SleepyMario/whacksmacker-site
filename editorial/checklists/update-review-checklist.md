@@ -4,6 +4,8 @@ Before creating the Codex update task and before editing public post content:
 
 - [ ] This checklist was reviewed.
 - [ ] Its contents were explicitly summarized to Ashwin.
+- [ ] Human Voice came exclusively from Ashwin; if none was supplied, the section remains pending.
+- [ ] ChatGPT or Codex did not generate, rewrite, paraphrase, correct, or substitute Human Voice.
 - [ ] Human Voice matches exactly in `index.html`, `human-voice/index.html`, and `progress.html`.
 - [ ] Human Voice remains only one subsection of the combined Progress update.
 - [ ] Cards, archive entries, posts, and milestones are newest first.

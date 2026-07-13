@@ -1,7 +1,7 @@
 # WhackSmacker Website Update Rules
 
-Policy version: 1  
-Last updated: 2026-07-12
+Policy version: 2
+Last updated: 2026-07-13
 
 This file is the canonical human-readable policy for public WhackSmacker website updates. `data/website-update-policy.json` is the stable machine-checkable subset, and its schema is `schemas/website-update-policy-v1.schema.json`. Keep all three synchronized. This Markdown policy controls nuanced editorial interpretation.
 
@@ -18,7 +18,7 @@ Do not create a separate long-form article unless Ashwin explicitly requests one
 
 ## Human Voice
 
-Human Voice is supplied by Ashwin. Preserve it exactly: do not rewrite, polish, expand, summarize, or explain it. Use the same exact text on the homepage, Human Voice archive, and Progress page. It remains one subsection of the combined update and must not become the entire technical update unless explicitly instructed.
+Human Voice is supplied exclusively by Ashwin. It must never be generated, rewritten, paraphrased, corrected, substituted, polished, expanded, summarized, or explained by ChatGPT or Codex. Preserve supplied text exactly on the homepage, Human Voice archive, and Progress page. If Ashwin has not supplied Human Voice text for an update, leave the section pending. Human Voice remains one subsection of the combined update and must not become the entire technical update unless explicitly instructed.
 
 ## Technical update style
 
