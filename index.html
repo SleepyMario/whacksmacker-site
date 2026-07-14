@@ -45,10 +45,11 @@
         <article>
           <h3>Development state</h3>
           <ul>
-            <li>Public development preview / alpha.</li>
+            <li>Public alpha with accounts, curriculum reading, package installation, and review access.</li>
             <li>Not stable, not polished, and not ready for serious study routines.</li>
-            <li>Package/content system in active development.</li>
-            <li>Docker image exists, but it is still experimental.</li>
+            <li>The core/curricula package split, installation path, and web reader are operational.</li>
+            <li>Dutch and Vietnamese are the first test curricula for a repeatable content-production workflow.</li>
+            <li>Docker builds are available, but they are still experimental.</li>
           </ul>
         </article>
         <article>
@@ -70,9 +71,10 @@
         <article>
           <h3>Current build shape</h3>
           <p>
-            Package feeds, Docker usage, strict review examples, review UI work, and content
-            correction are the active development path. The project is useful for validation,
-            not stable public study yet.
+            The public alpha can install curriculum packages and expose reading and review material
+            through the web reader. Current work is shifting toward normalizing authored Reading
+            content, beginning with Dutch and then Vietnamese. Neither curriculum is claimed finished
+            or production-ready.
           </p>
         </article>
       </section>
@@ -81,6 +83,11 @@
         <h2 id="human-voice-heading">Human Voice</h2>
         <p class="section-note">Short project notes from Ashwin directly; for earlier voice acting please click <a href="human-voice/">here</a>.</p>
         <div class="cards">
+          <article>
+            <p class="post-meta">Ashwin - 2026-07-14</p>
+            <h3>Reading as the Source of Truth</h3>
+            <p>Now both the Dutch & Vietnamese curriculum have been revised. Now that I finally have understood how this all works these two curricula will serve as test ground. The next immediate goal is to get the reading content polished up to an acceptable level. Separate grammar and exercise input will follow in a later stage.</p>
+          </article>
           <article>
             <p class="post-meta">Ashwin - 2026-07-13</p>
             <h3>Core and Curricula Split</h3>
@@ -167,18 +174,22 @@
           </article>
           <article>
             <h3>Vietnamese</h3>
-            <p>Core curriculum exists and a review deck is available in development builds.</p>
+            <p>The revised curriculum and its intended review collections package and install correctly. Reading-format validation now passes without changing the approved lesson content, while broader presentation and structural polish continue.</p>
             <p class="status-tags">
-              <span>Review deck present</span>
-              <span>Example/source correctness pass needed</span>
+              <span>Curriculum revised</span>
+              <span>Review collections present</span>
+              <span>Reading checks pass</span>
+              <span>Formatting polish continues</span>
             </p>
           </article>
           <article>
             <h3>Dutch</h3>
-            <p>Core curriculum exists and a review deck is available in development builds.</p>
+            <p>Dutch Chapters 1-25 are available and the curriculum has been revised. Most content is already acceptable, so Dutch will be the first test for Reading-format normalization. A possible minor Chapter 18 issue will be reviewed once it is specified.</p>
             <p class="status-tags">
-              <span>Review deck present</span>
-              <span>Example/source correctness pass needed</span>
+              <span>Chapters 1-25</span>
+              <span>Review material present</span>
+              <span>First formatting test curriculum</span>
+              <span>Chapter 18 review pending</span>
             </p>
           </article>
           <article>
@@ -209,11 +220,10 @@
         <div class="notice">
           <h3>Next major content milestone</h3>
           <p>
-            Continue adding language content under the stricter rulebook. Normal core review
-            cards should use one to three literal examples from source/read content where
-            expected. Invented example sentences should not be generated for review output.
-            Chinese conversion-only pronunciation decks remain exempt, and Japanese Chapter
-            1-5 is the next language-content target.
+            Standardize and polish the Reading layer, beginning with Dutch and then applying the
+            resulting format to Vietnamese. Reading is the authoritative source; Decks are already
+            largely derived from it, while Grammar and Exercises will follow later. The reader will
+            also eventually let learners show or hide translations.
           </p>
         </div>
       </section>
@@ -248,7 +258,20 @@
             <p>
               A review source is the thing a learner actually studies: a deck-like set of prompts,
               answers, notes, and examples. Current examples include Korean chapter ranges,
-              Chinese pronunciation conversion, and Vietnamese Chapter 1-5.
+              Chinese pronunciation conversion, and the intended Vietnamese review collections.
+            </p>
+          </article>
+          <article>
+            <h3>One chapter, four connected parts</h3>
+            <ol>
+              <li><strong>Reading</strong></li>
+              <li><strong>Deck</strong></li>
+              <li><strong>Grammar</strong></li>
+              <li><strong>Exercises</strong></li>
+            </ol>
+            <p>
+              Reading is the source of truth. Decks, Grammar, and Exercises should be derived from
+              approved Reading content rather than becoming separate, competing curricula.
             </p>
           </article>
           <article>
