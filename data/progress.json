@@ -1,6 +1,11 @@
 {
   "milestones": [
     {
+      "date": "2026-07-15",
+      "title": "Vietnamese 0.2.0 and One Public Website",
+      "summary": "Validated the Vietnamese 0.2.0 test curriculum and its two 20-card review decks, consolidated the improved public site at www.whacksmacker.com, and completed package, CLI, and full-suite validation successfully."
+    },
+    {
       "date": "2026-07-14",
       "title": "Reading as the Source of Truth",
       "summary": "Revised the Dutch and Vietnamese curricula, made Vietnamese curriculum and review packaging dependable with passing Reading checks, and established Reading as the approved source for the connected Deck, Grammar, and Exercises model."

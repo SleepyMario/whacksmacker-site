@@ -20,7 +20,7 @@
         <a href="human-voice/">Developer Notes</a>
         <a href="https://github.com/SleepyMario/WhackSmacker">GitHub</a>
       </nav>
-      <a class="button button-small header-login" href="https://alpha.whacksmacker.com/login">Log in</a>
+      <a class="button button-small header-login" href="https://www.whacksmacker.com/login">Log in</a>
     </header>
 
     <main>
@@ -31,8 +31,54 @@
       </section>
 
       <section class="post" aria-labelledby="latest-update-heading">
+        <p class="post-meta">2026-07-15</p>
+        <h2 id="latest-update-heading">Vietnamese 0.2.0 and One Public Website</h2>
+        <h3>Human Voice</h3>
+        <p>Not too much done, the website got somewhat improved. The distinction between alpha.whacksmacker.com and www.whacksmacker.com is gone. Alpha is byebye.</p>
+
+        <h3>Vietnamese 0.2.0 test curriculum</h3>
+        <p>
+          Vietnamese Foundation Chapters 1–5 and Core Chapters 1–10 are now the authoritative test
+          curriculum, with Grammar Easy and Grammar Hard summaries for Chapters 1–5 and 6–10. The
+          validated 0.2.0 reading package is joined by a 0.2.0 review package containing exactly two
+          20-card decks: Chapters 1–5 and Chapters 6–10. Later Core chapters remain legacy source
+          artifacts and are not included in this release.
+        </p>
+
+        <h3>Review continuity</h3>
+        <p>
+          WhackSmacker supports the revised Vietnamese review packages while respecting each learner's
+          history: new or materially changed cards begin as new, unchanged cards keep their progress,
+          and removed cards are no longer scheduled.
+        </p>
+
+        <h3>CLI and package validation</h3>
+        <p>
+          The local package feed rebuilt successfully, and the normal runner installs both Vietnamese
+          reading and review packages. Both review decks appear in the CLI, with Foundation Chapters
+          1–5 still pinned above Core Chapter 1. The full application suite passed 501 tests with no
+          failures; one PostgreSQL integration test was skipped because its external test database was
+          not configured.
+        </p>
+
+        <h3>One public website</h3>
+        <p>
+          The redesigned public website now includes authentic CLI and web screenshots. The separate
+          alpha destination has been retired: <a href="https://www.whacksmacker.com">www.whacksmacker.com</a>
+          is the single public website destination. The web version remains under construction.
+        </p>
+
+        <h3>Current test ground and next step</h3>
+        <p>
+          Dutch Chapters 1–25 provide the native-language baseline, while Vietnamese Chapters 1–10
+          provide the active target-language test. Real self-study will now show what works and what
+          needs improvement. No new Docker release was created today.
+        </p>
+      </section>
+
+      <section class="post" aria-labelledby="july-14-update-heading">
         <p class="post-meta">2026-07-14</p>
-        <h2 id="latest-update-heading">Reading as the Source of Truth</h2>
+        <h2 id="july-14-update-heading">Reading as the Source of Truth</h2>
         <h3>Human Voice</h3>
         <p>Now both the Dutch & Vietnamese curriculum have been revised. Now that I finally have understood how this all works these two curricula will serve as test ground. The next immediate goal is to get the reading content polished up to an acceptable level. Separate grammar and exercise input will follow in a later stage.</p>
 
