@@ -56,6 +56,18 @@
       "note": "Move the current public path under the frontend-owned prefix."
     },
     {
+      "from": "/assets/screenshots/cli.webp",
+      "to": "/developer-notes/assets/screenshots/cli.webp",
+      "status": 301,
+      "note": "Move the current public path under the frontend-owned prefix."
+    },
+    {
+      "from": "/assets/screenshots/web-version.webp",
+      "to": "/developer-notes/assets/screenshots/web-version.webp",
+      "status": 301,
+      "note": "Move the current public path under the frontend-owned prefix."
+    },
+    {
       "from": "/assets/terminal-preview.svg",
       "to": "/developer-notes/assets/terminal-preview.svg",
       "status": 301,
