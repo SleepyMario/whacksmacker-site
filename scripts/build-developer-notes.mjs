@@ -14,6 +14,8 @@ const files = [
   "human-voice/index.html",
   "styles.css",
   "assets/progress.js",
+  "assets/screenshots/cli.webp",
+  "assets/screenshots/web-version.webp",
   "assets/terminal-preview.svg",
   "data/progress.json"
 ];
@@ -27,6 +29,8 @@ const currentRoutes = [
   { path: "/human-voice/index.html", file: "human-voice/index.html", kind: "page-alias", canonicalPath: "/human-voice/" },
   { path: "/styles.css", file: "styles.css", kind: "asset" },
   { path: "/assets/progress.js", file: "assets/progress.js", kind: "asset" },
+  { path: "/assets/screenshots/cli.webp", file: "assets/screenshots/cli.webp", kind: "asset" },
+  { path: "/assets/screenshots/web-version.webp", file: "assets/screenshots/web-version.webp", kind: "asset" },
   { path: "/assets/terminal-preview.svg", file: "assets/terminal-preview.svg", kind: "asset" },
   { path: "/data/progress.json", file: "data/progress.json", kind: "asset" }
 ];
