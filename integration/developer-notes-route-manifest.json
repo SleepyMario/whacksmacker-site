@@ -51,16 +51,6 @@
       "kind": "asset"
     },
     {
-      "path": "/assets/screenshots/cli.webp",
-      "file": "assets/screenshots/cli.webp",
-      "kind": "asset"
-    },
-    {
-      "path": "/assets/screenshots/web-version.webp",
-      "file": "assets/screenshots/web-version.webp",
-      "kind": "asset"
-    },
-    {
       "path": "/assets/terminal-preview.svg",
       "file": "assets/terminal-preview.svg",
       "kind": "asset"
@@ -119,16 +109,6 @@
     {
       "path": "/developer-notes/assets/progress.js",
       "file": "assets/progress.js",
-      "kind": "asset"
-    },
-    {
-      "path": "/developer-notes/assets/screenshots/cli.webp",
-      "file": "assets/screenshots/cli.webp",
-      "kind": "asset"
-    },
-    {
-      "path": "/developer-notes/assets/screenshots/web-version.webp",
-      "file": "assets/screenshots/web-version.webp",
       "kind": "asset"
     },
     {
