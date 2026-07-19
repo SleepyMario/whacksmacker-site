@@ -1,0 +1,105 @@
+/* Approved CLI and GUI preview composition. */
+.interface-showcase {
+  grid-template-columns: .96fr 1.04fr;
+  gap: 1.35rem;
+}
+
+.product-window figcaption {
+  margin-bottom: .55rem;
+  color: #d65be3;
+  font-size: 1.08rem;
+}
+
+.window-bar {
+  position: relative;
+  gap: 7px;
+  height: 33px;
+  padding: 0 .7rem;
+  background: linear-gradient(#19222f, #121a25);
+  font-size: .66rem;
+}
+
+.window-bar i {
+  flex: none;
+  width: 9px;
+  height: 9px;
+}
+
+.window-bar i:nth-child(3) { background: #586470; }
+.window-bar > span {
+  position: absolute;
+  left: 50%;
+  margin: 0;
+  transform: translateX(-50%);
+}
+.gui-window-bar i:nth-child(3) { background: #5bd06b; }
+.gui-window-bar .history {
+  position: static;
+  margin-left: 2px;
+  transform: none;
+  color: #475365;
+  font-size: 1rem;
+  letter-spacing: .25rem;
+}
+.gui-window-bar .window-title { position: absolute; }
+
+.terminal-window pre {
+  height: 308px;
+  margin: 0;
+  padding: .78rem 1rem;
+  overflow: hidden;
+  border: 1px solid #39465a;
+  border-top: 0;
+  border-radius: 0 0 10px 10px;
+  background: #050a12;
+  box-shadow: var(--shadow);
+  color: #f0f1f4;
+  font: 11px/1.48 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre;
+}
+
+.terminal-window pre b { color: #69db50; font-weight: 500; }
+.terminal-window pre span {
+  display: block;
+  margin: 0 -.3rem;
+  padding: .06rem .3rem;
+  background: linear-gradient(90deg, #183a20, #15311b);
+  color: #f0f1f4;
+}
+
+.gui-card {
+  height: 315px;
+  padding: .82rem 1rem 0;
+  border: 1px solid #39465a;
+  border-top: 0;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(#0b1320, #080e18);
+  box-shadow: var(--shadow);
+}
+
+.gui-top, .gui-nav, .ratings { display: flex; justify-content: space-between; gap: .45rem; }
+.gui-top { font-size: .69rem; }
+.progress { height: 4px; margin: .72rem 0 .8rem; border-radius: 99px; background: #1f2938; }
+.progress i { display: block; width: 44%; height: 100%; border-radius: inherit; background: #a454ff; box-shadow: 40px 0 0 #303647; }
+.question { display: grid; min-height: 148px; place-content: center; gap: .42rem; border: 1px solid #202c40; border-radius: 9px; background: linear-gradient(145deg, #0d1625, #0a121e); text-align: center; }
+.question small { color: #f0f1f4; font-size: .66rem; }
+.question strong { font-size: 1.36rem; font-weight: 500; }
+.question strong span { margin-left: .35rem; color: #9ea7b6; font-size: .8rem; }
+.question em { color: #8ee55c; font-size: 1.12rem; font-style: normal; }
+.question > b { display: grid; width: 22px; height: 22px; place-items: center; margin: auto; border: 1.5px solid #73d64e; border-radius: 50%; color: #73d64e; font-size: .76rem; }
+.ratings { margin-top: .48rem; }
+.ratings > span { display: grid; flex: 1; gap: .05rem; padding: .38rem .15rem; border-radius: 7px; background: #24191b; color: #ff685f; font-size: .69rem; text-align: center; }
+.ratings span:nth-child(2) { background: #2c2416; color: #ff9b42; }
+.ratings span:nth-child(3) { background: #2e2a15; color: #ffe04c; }
+.ratings span:nth-child(4) { background: #17281c; color: #8fe567; }
+.ratings strong { font-weight: 650; }
+.ratings small { color: inherit; font-size: .58rem; }
+.gui-nav { align-items: center; margin: .65rem -1rem 0; padding: .42rem .7rem .35rem; border-top: 1px solid #172132; color: #aeb6c3; font-size: .56rem; }
+.gui-nav span, .gui-nav b { display: grid; min-width: 42px; gap: .08rem; text-align: center; }
+.gui-nav i { font-size: .88rem; font-style: normal; }
+.gui-nav b { color: #bd72ff; font-weight: 500; }
+
+@media (max-width: 680px) {
+  .interface-showcase { grid-template-columns: 1fr; }
+  .showcase-note { grid-column: auto; }
+}

@@ -6,6 +6,7 @@
   <meta name="description" content="WhackSmacker is a modular learning platform for languages, chess, geography, mathematics, and future learning modules.">
   <title>WhackSmacker — Learn deeply. Remember longer.</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="preview.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -20,8 +21,8 @@
       <a href="https://github.com/SleepyMario/WhackSmacker">GitHub</a>
     </nav>
     <div class="header-actions">
-      <a class="button button-quiet button-small" href="https://www.whacksmacker.com/login">Log in</a>
-      <a class="button button-small" href="https://www.whacksmacker.com/">Open web app <span aria-hidden="true">↗</span></a>
+      <a class="button button-quiet button-small" href="/login">Log in</a>
+      <a class="button button-small" href="/login?returnTo=/app">Open web app <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
@@ -32,7 +33,7 @@
         <h1 id="hero-heading">Learn deeply.<br><span>Remember longer.</span></h1>
         <p class="hero-lede">WhackSmacker is a modular learning platform for languages, chess, geography, mathematics, and more—built around structured curricula, active review, and long-term retention.</p>
         <div class="actions">
-          <a class="button" href="https://www.whacksmacker.com/"><span aria-hidden="true">◎</span> Open web app</a>
+          <a class="button" href="/login?returnTo=/app"><span aria-hidden="true">◎</span> Open web app</a>
           <a class="button button-quiet" href="https://github.com/SleepyMario/WhackSmacker"><span aria-hidden="true">◖◗</span> View on GitHub</a>
         </div>
         <ul class="trust-list" aria-label="Platform qualities">
@@ -44,12 +45,28 @@
         <figure class="product-window terminal-window">
           <figcaption>CLI</figcaption>
           <div class="window-bar"><i></i><i></i><i></i><span>whacksmacker</span></div>
-          <img src="assets/screenshots/cli.webp" width="1200" height="600" alt="WhackSmacker CLI module screen showing Languages, Games, Geography, and Mathematics">
+          <pre><b>WhackSmacker 1.0.0</b>
+Modular Learning Platform
+----------------------------------------
+
+Select a module:
+
+<span>1) Languages                &gt;</span>
+2) Chess
+3) Geography
+4) Mathematics
+5) Custom Modules
+6) Settings
+7) Exit
+
+----------------------------------------
+Streak: 12 | Reviews: 43 | Time: 00:08:21
+&gt; _</pre>
         </figure>
         <figure class="product-window gui-window">
           <figcaption>GUI</figcaption>
-          <div class="window-bar"><i></i><i></i><i></i><span>WhackSmacker</span></div>
-          <img src="assets/screenshots/web-version.webp" width="1280" height="720" alt="WhackSmacker graphical web interface">
+          <div class="window-bar gui-window-bar"><i></i><i></i><i></i><span class="history" aria-hidden="true">‹ ›</span><span class="window-title">WhackSmacker</span></div>
+          <div class="gui-card"><div class="gui-top"><span>Spanish Core⌄</span><span>8 / 20</span></div><div class="progress"><i></i></div><div class="question"><small>What is the meaning of:</small><strong>el libro <span aria-hidden="true">♬</span></strong><em>book</em><b aria-label="Correct">✓</b></div><div class="ratings"><span><strong>Again</strong><small>&lt; 1 min</small></span><span><strong>Hard</strong><small>&lt; 6 min</small></span><span><strong>Good</strong><small>&lt; 1 day</small></span><span><strong>Easy</strong><small>4 days</small></span></div><div class="gui-nav"><span><i aria-hidden="true">▱</i>Decks</span><b><i aria-hidden="true">▣</i>Review</b><span><i aria-hidden="true">⌁</i>Progress</span><span><i aria-hidden="true">⌘</i>Stats</span><span><i aria-hidden="true">⚙</i>Settings</span></div></div>
         </figure>
         <p class="showcase-note">Languages lead the current build. Chess, geography, mathematics, and additional modules share the same learning platform.</p>
       </div>
@@ -77,7 +94,7 @@
       </div>
     </section>
 
-    <section class="cta" aria-labelledby="cta-heading"><div><span class="rocket" aria-hidden="true">➶</span><div><h2 id="cta-heading">Choose what to learn. Keep what you learn.</h2><p>Explore structured modules through the web interface or the complete command-line application.</p></div></div><div class="actions"><a class="button" href="https://www.whacksmacker.com/">Open web app</a><a class="button button-quiet" href="https://github.com/SleepyMario/WhackSmacker">Explore the CLI</a></div></section>
+    <section class="cta" aria-labelledby="cta-heading"><div><span class="rocket" aria-hidden="true">➶</span><div><h2 id="cta-heading">Choose what to learn. Keep what you learn.</h2><p>Explore structured modules through the web interface or the complete command-line application.</p></div></div><div class="actions"><a class="button" href="/login?returnTo=/app">Open web app</a><a class="button button-quiet" href="https://github.com/SleepyMario/WhackSmacker">Explore the CLI</a></div></section>
   </main>
 
   <footer><strong>WhackSmacker</strong><span>Open-source modular learning.</span><nav><a href="roadmap.html">Roadmap</a><a href="human-voice/">Developer Notes</a><a href="https://github.com/SleepyMario/WhackSmacker">GitHub</a></nav></footer>
