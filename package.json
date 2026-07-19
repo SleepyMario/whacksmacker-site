@@ -4,7 +4,11 @@
   "scripts": {
     "build:developer-notes": "node scripts/build-developer-notes.mjs",
     "check:developer-notes": "node scripts/build-developer-notes.mjs --check",
+    "cloudflare:dry-run": "wrangler deploy --config cloudflare/wrangler.jsonc --dry-run",
     "test": "node --test test/*.test.mjs",
     "validate:editorial": "node scripts/validate-website-update-policy.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.112.0"
   }
 }

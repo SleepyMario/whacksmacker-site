@@ -1,0 +1,21 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "whacksmacker-app-router",
+  "main": "src/router.js",
+  "compatibility_date": "2026-07-19",
+  "workers_dev": false,
+  "vars": {
+    "WHACKSMACKER_APP_ORIGIN": "https://node-origin.whacksmacker.com"
+  },
+  "routes": [
+    { "pattern": "www.whacksmacker.com/login*", "zone_name": "whacksmacker.com" },
+    { "pattern": "www.whacksmacker.com/app*", "zone_name": "whacksmacker.com" },
+    { "pattern": "www.whacksmacker.com/api/*", "zone_name": "whacksmacker.com" },
+    { "pattern": "www.whacksmacker.com/app.js*", "zone_name": "whacksmacker.com" },
+    { "pattern": "www.whacksmacker.com/login.js*", "zone_name": "whacksmacker.com" },
+    { "pattern": "www.whacksmacker.com/styles.css*", "zone_name": "whacksmacker.com" },
+    { "pattern": "www.whacksmacker.com/ui-locale.js*", "zone_name": "whacksmacker.com" },
+    { "pattern": "www.whacksmacker.com/landing.css*", "zone_name": "whacksmacker.com" },
+    { "pattern": "www.whacksmacker.com/assets/whacksmacker-logo.png*", "zone_name": "whacksmacker.com" }
+  ]
+}

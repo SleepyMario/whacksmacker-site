@@ -4,4 +4,6 @@
 *.wspkg
 *.apkg
 node_modules/
+.wrangler/
+.dev.vars
 dist/

@@ -3,6 +3,10 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+const [originalStyles, marketingStyles] = await Promise.all([
+  readFile(new URL("../styles.css", import.meta.url), "utf8"),
+  readFile(new URL("../marketing.css", import.meta.url), "utf8")
+]);
 const webOrigin = "https://www.whacksmacker.com";
 const publicPages = await Promise.all([
   "../index.html",
@@ -21,6 +25,14 @@ test("front-page authentication buttons use the visible login flow", () => {
 test("every public-site login CTA targets the canonical web GUI origin", () => {
   for (const [path, page] of publicPages) {
     assert.match(page, /href="https:\/\/www\.whacksmacker\.com\/login"[^>]*>Log in</, path);
+  }
+});
+
+test("marketing pages avoid the Node-only stylesheet route without visual changes", () => {
+  assert.equal(marketingStyles, originalStyles);
+  for (const [path, page] of publicPages) {
+    assert.doesNotMatch(page, /href="(?:\.\.\/)?styles\.css"/, path);
+    assert.match(page, /href="(?:\.\.\/)?marketing\.css"/, path);
   }
 });
 
