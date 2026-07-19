@@ -3,11 +3,25 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+const webOrigin = "https://www.whacksmacker.com";
+const publicPages = await Promise.all([
+  "../index.html",
+  "../roadmap.html",
+  "../progress.html",
+  "../downloads.html",
+  "../human-voice/index.html"
+].map(async path => [path, await readFile(new URL(path, import.meta.url), "utf8")]));
 
 test("front-page authentication buttons use the visible login flow", () => {
-  assert.match(html, /href="\/login"[^>]*>Log in</);
-  assert.equal((html.match(/href="\/login\?returnTo=\/app"/g) ?? []).length, 3);
-  assert.doesNotMatch(html, /href="https:\/\/www\.whacksmacker\.com\/"[^>]*>[^<]*Open web app/);
+  assert.match(html, new RegExp(`href="${webOrigin}/login"[^>]*>Log in`));
+  assert.equal((html.match(/href="https:\/\/www\.whacksmacker\.com\/login\?returnTo=%2Fapp"/g) ?? []).length, 3);
+  assert.doesNotMatch(html, /href="\/(?:login|app)/);
+});
+
+test("every public-site login CTA targets the canonical web GUI origin", () => {
+  for (const [path, page] of publicPages) {
+    assert.match(page, /href="https:\/\/www\.whacksmacker\.com\/login"[^>]*>Log in</, path);
+  }
 });
 
 test("front-page previews retain the approved CLI and GUI contents", () => {
