@@ -44,8 +44,14 @@
       "note": "Preserve the existing index-file alias."
     },
     {
-      "from": "/styles.css",
-      "to": "/developer-notes/styles.css",
+      "from": "/marketing.css",
+      "to": "/developer-notes/marketing.css",
+      "status": 301,
+      "note": "Move the current public path under the frontend-owned prefix."
+    },
+    {
+      "from": "/preview.css",
+      "to": "/developer-notes/preview.css",
       "status": 301,
       "note": "Move the current public path under the frontend-owned prefix."
     },

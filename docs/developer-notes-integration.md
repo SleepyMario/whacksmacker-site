@@ -18,7 +18,7 @@ No SPA fallback or Cloudflare Pages routing is required. A direct request for an
 
 ## Caching
 
-`styles.css`, `assets/progress.js`, `assets/terminal-preview.svg`, and `data/progress.json` may be cached as static assets. Because the current export does not fingerprint filenames, use revalidation or a short-to-moderate cache lifetime rather than `immutable` caching for these files. HTML files, including `404.html`, must not receive long-lived immutable caching.
+`marketing.css`, `preview.css`, `assets/progress.js`, `assets/terminal-preview.svg`, and `data/progress.json` may be cached as static assets. Because the current export does not fingerprint filenames, use revalidation or a short-to-moderate cache lifetime rather than `immutable` caching for these files. HTML files, including `404.html`, must not receive long-lived immutable caching.
 
 ## Security policy
 

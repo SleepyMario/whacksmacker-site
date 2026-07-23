@@ -41,8 +41,13 @@
       "canonicalPath": "/human-voice/"
     },
     {
-      "path": "/styles.css",
-      "file": "styles.css",
+      "path": "/marketing.css",
+      "file": "marketing.css",
+      "kind": "asset"
+    },
+    {
+      "path": "/preview.css",
+      "file": "preview.css",
       "kind": "asset"
     },
     {
@@ -112,8 +117,13 @@
       "canonicalPath": "/human-voice/"
     },
     {
-      "path": "/developer-notes/styles.css",
-      "file": "styles.css",
+      "path": "/developer-notes/marketing.css",
+      "file": "marketing.css",
+      "kind": "asset"
+    },
+    {
+      "path": "/developer-notes/preview.css",
+      "file": "preview.css",
       "kind": "asset"
     },
     {
